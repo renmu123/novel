@@ -1,0 +1,17 @@
+{% load staticfiles %}
+
+<html>
+<head>
+	<title>{{ post.title }}</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="{% static 'novel/search.css' %}"/>
+</head>
+<body>
+{% for post in post_list %}
+    <p>{{ post.title }}</p>
+{% empty %}
+    <div class="no-post">暂时还没有发布的文章！</div>
+{% endfor %}
+	<!-- <p>这功能还没做哈哈哈哈哈哈哈哈哈哈哈哈哈</p> -->
+</body>
+</html>

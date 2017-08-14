@@ -1,0 +1,9 @@
+
+<div class='nav'>
+	<form class='search' method='get' action='{% url 'novel:search' %}'>
+		{% csrf_token %}
+		<input type='search' name='q' placeholder='搜索' required />
+		<button type='submit'>搜索</button>
+	</form>
+	<a class='guestbook' href='{% url 'message_board:guestbook' %}'>留言板</a>
+</div>

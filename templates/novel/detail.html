@@ -1,0 +1,29 @@
+{% load staticfiles %}
+
+<html>
+	<head>
+		<title>{{ post.title }}</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="{% static 'novel/detail.css' %}"/>
+	</head>
+	<body>
+		<div class='middle'>
+			{% include 'base_search.html' %}
+			<div class='title_header'>
+				<span class='title'>{{ post.title }}</span>
+			</div>
+			<div>
+				<p class='novel_body'>作品简介</p>
+				<p class='novel_p'>{{ post.body }}</p>
+			</div>
+			<p class='download_p'>下载</p>
+			<ul class='download'>
+				{% for part in post.part.all %}
+					<li class=><a href='{% url 'novel:download' post.title part.name %}' download={{post.title}}{{part.name}}.mobi >第{{ part.name }}卷</a></li>
+					
+				{% endfor %}
+			
+			</ul>
+		</div>
+	</body>
+</html>

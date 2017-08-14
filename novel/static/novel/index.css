@@ -1,0 +1,73 @@
+body{
+	margin:0;
+	padding:0;
+	font-family:'微软雅黑';
+	font-size:14px;
+}
+a, a:visited{
+	color:black;
+	text-decoration:none;	
+}
+p{
+	margin:0;
+	padding:0;
+}
+h1{
+	color:blue;
+}
+.middle{
+	width:1200px;
+	margin:0 auto;
+	
+}
+.middle_book{
+	display:block;
+	height:190px;
+	margin-bottom:70px;
+}
+.book{
+	width:600px;
+	margin-left:200px;
+	height:210px;
+	overflow:hidden;
+}
+.book_tag{
+	margin:3px 0;
+	margin-right:15px;
+}
+.book_img{
+	display:inline;
+	height:215px;
+	width:150px;
+	float:left;
+}
+.book div{
+	margin:3px 0;
+}
+.name{
+	margin:3px 0;	
+}
+.name a{
+	font-weight:bold;
+	font-size:18px;
+	color:#1886ac;	
+}
+.author{
+	margin:3px 0;
+}
+.author_middle{
+	margin-left:22px;
+}
+.tag{
+	margin:0 3px;
+}
+.index_body{
+	font-size:13px;
+	line-height:1.5;
+}
+
+
+
+
+
+

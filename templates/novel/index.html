@@ -1,0 +1,37 @@
+{% load staticfiles %}
+
+<html>
+	<head>
+		<title>kindle轻小说</title>
+		<meta charset="utf-8"/>
+		<!-- css -->
+		<link rel="stylesheet" href="{% static 'novel/index.css' %}"/>
+		<link rel="stylesheet" href="{% static 'novel/base_search.css' %}"/>
+		<!-- js -->
+		<script src="{% static 'novel/jquery-3.1.1.js' %}"></script>
+		<script src="{% static 'novel/index.js' %}"></script>
+	</head>
+	<body>
+		<div class='middle'>
+		{% include 'base_search.html' %}
+		{% for post in post_list %}
+			<div class='middle_book'>
+				<a href='{% url 'novel:detail' post.pk %}'><img class='book_img' src='{{post.image_name}}'/></a>
+				<div class='book'>
+					<p class='name'><a href='{% url 'novel:detail' post.pk %}'>{{ post.title}}</a></p>
+					<p class='author'>作者：<a class='author_middle'>{{ post.author }}</a></p>
+					<div>
+						<a class='book_tag'>标签：</a>
+						{% for tag in post.tags.all %}
+							<a class='tag'>{{ tag.name }}</a>
+						{% endfor %}
+					</div>
+					<p class='index_body'>{{ post.body}}</p>
+					<!-- <a href='download/{{ post.title }}.mobi' download>下载</a> -->
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+		<!-- <h1>kindle轻小说</h1> -->
+	</body>
+<html>

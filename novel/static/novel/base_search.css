@@ -1,0 +1,29 @@
+.nav{
+	height:60px;
+}
+.search{
+	height:60px;
+	float:right;
+	position:relative;
+}
+.search input{
+	width:200px;
+	margin:20px 50px 0 0;
+	height:30px;
+	border:2px solid #B0C4DE;
+}
+.search button{
+	font-size:15px;
+	position:relative;
+	right:40px;
+	top:2px;
+	padding:4px 17px;
+	border-radius:4px;
+	border:1px solid gray;
+}
+.nav a{
+	float:right;
+	margin:23px 20px 0 0;
+	font-size:16px;
+	color:red;
+}
