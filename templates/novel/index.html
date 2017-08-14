@@ -16,7 +16,7 @@
 		{% include 'base_search.html' %}
 		{% for post in post_list %}
 			<div class='middle_book'>
-				<a href='{% url 'novel:detail' post.pk %}'><img class='book_img' src='{{post.image_name}}'/></a>
+				<a href='{% url 'novel:detail' post.pk %}'><img class='book_img' src='media/{{post.image_name}}'/></a>
 				<div class='book'>
 					<p class='name'><a href='{% url 'novel:detail' post.pk %}'>{{ post.title}}</a></p>
 					<p class='author'>作者：<a class='author_middle'>{{ post.author }}</a></p>

@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.utils.encoding import smart_text
 
 class Tag(models.Model):
     name = models.CharField(max_length=100)
@@ -41,7 +42,7 @@ class Post(models.Model):
     # 章节
     part= models.ManyToManyField(Part, blank=True)
     # 图片
-    image_name = models.FileField(upload_to="static/images")
+    image_name =models.FileField(upload_to="./images")
 
 
     def __str__(self):
