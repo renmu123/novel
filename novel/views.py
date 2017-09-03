@@ -24,7 +24,7 @@ def download(request, path, num):
                 else:
                     break
 
-    the_file_name = "download/" + path + str(num) + '.mobi'
+    the_file_name = 'var/www/novel/' + "media/download/" + path + str(num) + '.mobi'
     # print(pk)
     # the_file_name = 'download/' + pk
     response = StreamingHttpResponse(file_iterator(the_file_name))
